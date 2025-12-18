@@ -16,7 +16,7 @@ const RechargePlans = () => {
   const fetchPlans = async () => {
     setLoading(true);
     try {
-      const response = await fetch('https://mobile-recharge-backend-9hk1.onrender.com');
+      const response = await fetch('https://mobile-recharge-backend-9hk1.onrender.com/api/plans');
       const data = await response.json();
       console.log('RechargePlans - API response:', data);
       
