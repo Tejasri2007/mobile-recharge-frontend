@@ -8,7 +8,7 @@ const usePlans = (autoRefreshInterval = 30000) => {
   const fetchPlans = useCallback(async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/api/plans');
+      const response = await fetch('https://mobile-recharge-backend-9hk1.onrender.com/');
       const data = await response.json();
       
       if (data.success && data.plans) {
