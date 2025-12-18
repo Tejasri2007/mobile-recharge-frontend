@@ -46,7 +46,7 @@ const AdminDashboard = () => {
     
     // Load users
     try {
-      const response = await fetch('http://localhost:5000/api/users', {
+      const response = await fetch('https://mobile-recharge-backend-9hk1.onrender.com/api/users', {
         headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
       });
       const data = await response.json();
@@ -107,7 +107,7 @@ const AdminDashboard = () => {
       };
       
       console.log('Adding plan:', planData);
-      const response = await fetch('http://localhost:5000/api/plans', {
+      const response = await fetch('https://mobile-recharge-backend-9hk1.onrender.com/api/plans', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
